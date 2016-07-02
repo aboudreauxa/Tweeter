@@ -55,6 +55,10 @@ Here's a walkthrough of implemented user stories:
 <img src='https://imgur.com/V2Y0yk3' />
 <img src='https://imgur.com/iUM500e' />
 
+Links: https://imgur.com/iUM500e
+https://imgur.com/V2Y0yk3
+https://imgur.com/iUM500e
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
