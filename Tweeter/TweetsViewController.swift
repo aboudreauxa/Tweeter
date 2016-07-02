@@ -27,6 +27,9 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         self.performSegueWithIdentifier("postSegue", sender: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
   
 
     override func viewDidLoad() {

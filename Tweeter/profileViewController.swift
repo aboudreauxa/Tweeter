@@ -69,9 +69,19 @@ class profileViewController: UIViewController, UITableViewDataSource, UITableVie
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProfileTableCell", forIndexPath:indexPath) as! ProfileTableCell
         let userTweet = userTweets[indexPath.row]
         let userText = userTweet.text as! String
+        let date = (userTweet.timestamp)! as NSDate
+        let relativeTimestamp = date.dateTimeUntilNow()
+        let stringUsername = userTweet.username as? String
         
-        
+        cell.profileTime.text = relativeTimestamp
     cell.profilePostsLabel.text = userText
+    cell.profileName.text = userTweet.name as? String
+        
+    cell.profileUsername.text = "@" + stringUsername!
+        cell.profileRetweets.text = "\(userTweet.retweetCount)"
+         cell.profileFavorite.text = "\(userTweet.favoritesCount)"
+   
+        
    
         
         return cell

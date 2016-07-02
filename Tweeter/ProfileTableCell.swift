@@ -10,8 +10,13 @@ import UIKit
 
 class ProfileTableCell: UITableViewCell {
 
-
+    @IBOutlet weak var profileFavorite: UILabel!
+    
+    @IBOutlet weak var profileRetweets: UILabel!
+    @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var profilePostsLabel: UILabel!
+    @IBOutlet weak var profileUsername: UILabel!
+    @IBOutlet weak var profileTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

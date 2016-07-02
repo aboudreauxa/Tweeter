@@ -13,6 +13,8 @@ class postViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var characterCount: UILabel!
     @IBOutlet weak var postText: UITextView!
+   
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +40,9 @@ class postViewController: UIViewController, UITextViewDelegate {
         let stringPost: String = self.postText.text
         TwitterClient.sharedInstance.post(stringPost)
 
-        self.performSegueWithIdentifier("cancelSegue", sender: nil)
+        //self.performSegueWithIdentifier("cancelSegue", sender: nil)
         TwitterClient.sharedInstance.currentAccount({ (User: (User)) -> () in
+           
             
             }, failure: { (error: NSError) -> () in
                 print("error")
