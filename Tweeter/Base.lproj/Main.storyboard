@@ -1,25 +1,795 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjq-nS-JC2">
+                                <rect key="frame" x="56" y="421" width="208" height="74"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <state key="normal" title="Log In With Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgt-qU-2Fd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382383_twitter_social_media_logo_brand" translatesAutoresizingMaskIntoConstraints="NO" id="1C3-ta-nrG">
+                                <rect key="frame" x="8" y="86" width="305" height="283"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cc-uW-oGP">
+                                <rect key="frame" x="0.0" y="20" width="320" height="58"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="67"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="g02-h2-5zb">
+                                <rect key="frame" x="156" y="504" width="40" height="37"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="1Jn-Dm-amm">
+                                <rect key="frame" x="266" y="86" width="28" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="Mck-ge-TY1">
+                                <rect key="frame" x="8" y="9" width="34" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="JII-4t-meh">
+                                <rect key="frame" x="298" y="546" width="22" height="22"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="AGd-80-e4R">
+                                <rect key="frame" x="266" y="354" width="31" height="29"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="DaU-fj-Pv9">
+                                <rect key="frame" x="11" y="444" width="28" height="28"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="eqr-oz-ZPo" kind="presentation" identifier="loginSegue" id="Qsq-rq-1JL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="177" y="279"/>
+        </scene>
+        <!--Tweets View Controller-->
+        <scene sceneID="mr4-tP-vG4">
+            <objects>
+                <viewController id="hrB-xk-vuN" customClass="TweetsViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mfh-wk-vT3"/>
+                        <viewControllerLayoutGuide type="bottom" id="IX2-Yj-kKn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uKw-ml-PPU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="181" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WLV-Zv-v7N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="181" id="Wje-Nr-GCG" customClass="tableViewCell" customModule="Tweeter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="181"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wje-Nr-GCG" id="5HL-Je-KwD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txT-lm-9bP">
+                                                    <rect key="frame" x="258" y="0.0" width="54" height="14"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnQ-Xf-cUd">
+                                                    <rect key="frame" x="95" y="118" width="9.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xG-AZ-nbE">
+                                                    <rect key="frame" x="262" y="118" width="9.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-25-uAg">
+                                                    <rect key="frame" x="64" y="12" width="51.5" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Ne9-Hx-P0L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="1467374585_Fire" translatesAutoresizingMaskIntoConstraints="NO" id="DQC-eE-Ien">
+                                                    <rect key="frame" x="229" y="114" width="31" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22.5" id="05C-3b-IO5"/>
+                                                        <constraint firstAttribute="width" constant="31" id="pUw-KI-3bM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="iconmonstr-retweet-2-48" translatesAutoresizingMaskIntoConstraints="NO" id="3gG-1V-JBR">
+                                                    <rect key="frame" x="59" y="115" width="28" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="Od5-4t-XyT"/>
+                                                        <constraint firstAttribute="width" constant="28" id="ZsG-i7-cV9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLJ-vH-kpP">
+                                                    <rect key="frame" x="0.0" y="165" width="320" height="15"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-8w-WFe">
+                                                    <rect key="frame" x="0.0" y="176" width="320" height="5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-vm-JVx">
+                                                    <rect key="frame" x="0.0" y="175" width="320" height="2"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXc-GK-4Yi">
+                                                    <rect key="frame" x="66" y="45" width="246" height="63"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTV-yX-Xw4">
+                                                    <rect key="frame" x="122" y="18" width="53.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-fP-MGz">
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="33.5"/>
+                                                    <connections>
+                                                        <segue destination="q8u-nG-406" kind="show" id="VvP-7w-EqP"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtx-6Q-CEs">
+                                                    <rect key="frame" x="0.0" y="8" width="58" height="55.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55.5" id="57h-J0-ONG"/>
+                                                        <constraint firstAttribute="width" constant="58" id="QBR-ww-Ui7"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vGp-8w-WFe" firstAttribute="top" secondItem="3gG-1V-JBR" secondAttribute="bottom" constant="39" id="1m5-ME-t5r"/>
+                                                <constraint firstItem="hLJ-vH-kpP" firstAttribute="leading" secondItem="5HL-Je-KwD" secondAttribute="leadingMargin" constant="-8" id="2Mi-cE-dke"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Au3-vm-JVx" secondAttribute="trailing" constant="-8" id="7iy-vJ-ACR"/>
+                                                <constraint firstItem="yTV-yX-Xw4" firstAttribute="top" secondItem="5HL-Je-KwD" secondAttribute="topMargin" constant="10" id="CfF-lZ-bsP"/>
+                                                <constraint firstItem="XnQ-Xf-cUd" firstAttribute="leading" secondItem="3gG-1V-JBR" secondAttribute="trailing" constant="8" id="DAL-o2-F2m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5xG-AZ-nbE" secondAttribute="trailing" constant="40" id="J5n-cP-sk2"/>
+                                                <constraint firstItem="Au3-vm-JVx" firstAttribute="top" secondItem="3gG-1V-JBR" secondAttribute="bottom" constant="38" id="L0c-u3-uaY"/>
+                                                <constraint firstItem="3gG-1V-JBR" firstAttribute="top" secondItem="eXc-GK-4Yi" secondAttribute="bottom" constant="7" id="LdI-oR-Xc5"/>
+                                                <constraint firstItem="txT-lm-9bP" firstAttribute="trailing" secondItem="5HL-Je-KwD" secondAttribute="trailingMargin" id="MqR-7Y-9P8"/>
+                                                <constraint firstItem="txT-lm-9bP" firstAttribute="top" secondItem="5HL-Je-KwD" secondAttribute="topMargin" constant="-8" id="N20-UU-IM0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hLJ-vH-kpP" secondAttribute="bottom" constant="-7.5" id="QqQ-1u-MnA"/>
+                                                <constraint firstItem="eXc-GK-4Yi" firstAttribute="trailing" secondItem="5HL-Je-KwD" secondAttribute="trailingMargin" id="RZK-sE-UBd"/>
+                                                <constraint firstItem="yTV-yX-Xw4" firstAttribute="leading" secondItem="a4r-25-uAg" secondAttribute="trailing" constant="7" id="SyR-WC-bWp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hLJ-vH-kpP" secondAttribute="trailing" constant="-8" id="VcN-O6-qNQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vGp-8w-WFe" secondAttribute="trailing" constant="-8" id="WBX-lP-DSK"/>
+                                                <constraint firstItem="hLJ-vH-kpP" firstAttribute="top" secondItem="3gG-1V-JBR" secondAttribute="bottom" constant="28" id="aqZ-mP-jqT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XnQ-Xf-cUd" secondAttribute="bottom" constant="35.5" id="bE4-ZL-WOh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Au3-vm-JVx" secondAttribute="bottom" constant="-4.5" id="e3h-LW-4a5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5xG-AZ-nbE" secondAttribute="bottom" constant="35.5" id="f0g-zw-Cxr"/>
+                                                <constraint firstItem="3gG-1V-JBR" firstAttribute="leading" secondItem="5HL-Je-KwD" secondAttribute="leadingMargin" constant="51" id="gjR-ea-o4A"/>
+                                                <constraint firstItem="5xG-AZ-nbE" firstAttribute="leading" secondItem="DQC-eE-Ien" secondAttribute="trailing" constant="2" id="jPJ-83-mJO"/>
+                                                <constraint firstItem="Au3-vm-JVx" firstAttribute="leading" secondItem="5HL-Je-KwD" secondAttribute="leadingMargin" constant="-8" id="kui-oO-OJb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3gG-1V-JBR" secondAttribute="bottom" constant="35.5" id="pkV-a7-MSV"/>
+                                                <constraint firstItem="vGp-8w-WFe" firstAttribute="leading" secondItem="5HL-Je-KwD" secondAttribute="leadingMargin" constant="-8" id="qRJ-l0-g1L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DQC-eE-Ien" secondAttribute="bottom" constant="36" id="sFw-oy-Mks"/>
+                                                <constraint firstItem="a4r-25-uAg" firstAttribute="top" secondItem="5HL-Je-KwD" secondAttribute="topMargin" constant="4" id="sn5-a0-X7d"/>
+                                                <constraint firstItem="eXc-GK-4Yi" firstAttribute="leading" secondItem="gtx-6Q-CEs" secondAttribute="trailing" constant="8" id="ulS-wj-psi"/>
+                                                <constraint firstItem="gtx-6Q-CEs" firstAttribute="top" secondItem="5HL-Je-KwD" secondAttribute="top" constant="8" id="unX-8f-b8y"/>
+                                                <constraint firstItem="a4r-25-uAg" firstAttribute="leading" secondItem="gtx-6Q-CEs" secondAttribute="trailing" constant="6" id="v3M-Kk-Di0"/>
+                                                <constraint firstItem="gtx-6Q-CEs" firstAttribute="leading" secondItem="5HL-Je-KwD" secondAttribute="leading" id="vcb-g8-7lE"/>
+                                                <constraint firstItem="eXc-GK-4Yi" firstAttribute="top" secondItem="a4r-25-uAg" secondAttribute="bottom" constant="8" id="vsg-wH-n67"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vGp-8w-WFe" secondAttribute="bottom" constant="-8.5" id="zeo-G9-n8a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteLabel" destination="5xG-AZ-nbE" id="N02-Of-vJh"/>
+                                            <outlet property="nameLabel" destination="a4r-25-uAg" id="JLu-lQ-2yN"/>
+                                            <outlet property="onProfile" destination="yUK-fP-MGz" id="vK8-Ur-pM9"/>
+                                            <outlet property="profileImage" destination="gtx-6Q-CEs" id="MHA-k4-Awn"/>
+                                            <outlet property="retweetLabel" destination="XnQ-Xf-cUd" id="Hee-mR-SjI"/>
+                                            <outlet property="timeStamp" destination="txT-lm-9bP" id="W8G-OG-6AI"/>
+                                            <outlet property="tweetLabel" destination="eXc-GK-4Yi" id="lEP-UZ-LZY"/>
+                                            <outlet property="usernameLabel" destination="yTV-yX-Xw4" id="VeU-6P-ulx"/>
+                                            <segue destination="qUe-wD-5TO" kind="show" id="LtY-QT-d2O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WLV-Zv-v7N" secondAttribute="trailing" id="9pB-rr-5UP"/>
+                            <constraint firstItem="WLV-Zv-v7N" firstAttribute="leading" secondItem="uKw-ml-PPU" secondAttribute="leading" id="mgX-LL-918"/>
+                            <constraint firstItem="WLV-Zv-v7N" firstAttribute="top" secondItem="uKw-ml-PPU" secondAttribute="top" id="wAs-hg-B4M"/>
+                            <constraint firstAttribute="bottom" secondItem="WLV-Zv-v7N" secondAttribute="bottom" id="xRv-pS-Dvc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zgp-0v-BQi">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="1467381729_sign-in" id="7wa-G3-g9c">
+                            <connections>
+                                <action selector="onLogout:" destination="hrB-xk-vuN" id="f6H-5Y-HqP"/>
+                            </connections>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u01-oJ-0Qg">
+                            <rect key="frame" x="96" y="-42" width="128" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="1467383714_twitter_online_social_media"/>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" image="iconmonstr-pen-18-32" id="406-ri-8lA">
+                            <connections>
+                                <action selector="onPost:" destination="hrB-xk-vuN" id="PlX-AQ-YW7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="WLV-Zv-v7N" id="uDF-DO-KHQ"/>
+                        <segue destination="mpq-md-fIm" kind="presentation" identifier="postSegue" id="kFn-OR-alo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h3-Ys-ez8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="353"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="G0H-PA-ceg">
+            <objects>
+                <viewController id="q8u-nG-406" customClass="SelectViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7G-cD-nEs"/>
+                        <viewControllerLayoutGuide type="bottom" id="q7A-SF-1YG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D2U-Sp-AI7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXc-eV-dlf">
+                                <rect key="frame" x="79" y="103" width="241" height="31"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDj-M9-nrZ">
+                                <rect key="frame" x="71" y="72" width="249" height="31"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYc-d8-xga">
+                                <rect key="frame" x="0.0" y="64" width="71" height="70"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-f4-jQY">
+                                <rect key="frame" x="95" y="275" width="36" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80T-Ho-fP1">
+                                <rect key="frame" x="0.0" y="275" width="35" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tagline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrJ-aH-diZ">
+                                <rect key="frame" x="0.0" y="147" width="320" height="120"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-2H-V30">
+                                <rect key="frame" x="30" y="276" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6I-s0-3h5">
+                                <rect key="frame" x="127" y="276" width="77" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwx-S7-aqG">
+                                <rect key="frame" x="243" y="274" width="77" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-Fg-dJO">
+                                <rect key="frame" x="218" y="275" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="selectFollowers" destination="hbt-Fg-dJO" id="RFp-WM-gqX"/>
+                        <outlet property="selectFollowing" destination="yp3-f4-jQY" id="MGj-mF-NjB"/>
+                        <outlet property="selectName" destination="xDj-M9-nrZ" id="zhw-nd-Gx8"/>
+                        <outlet property="selectProfileImage" destination="YYc-d8-xga" id="9oo-yS-gPC"/>
+                        <outlet property="selectTagline" destination="KrJ-aH-diZ" id="BoU-hp-dex"/>
+                        <outlet property="selectTweets" destination="80T-Ho-fP1" id="gqh-7l-u3P"/>
+                        <outlet property="selectUsername" destination="tXc-eV-dlf" id="uO1-Ja-5xu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aS-au-fdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="737"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Ov3-Io-eBu">
+            <objects>
+                <viewController id="qUe-wD-5TO" customClass="DetailViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ooQ-EW-3L1"/>
+                        <viewControllerLayoutGuide type="bottom" id="5zy-ii-4Xr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bjq-9b-Jxs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYz-Ei-v1y">
+                                <rect key="frame" x="19" y="208" width="281" height="137"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-Wz-8aQ">
+                                <rect key="frame" x="91" y="162" width="221" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOL-IP-jUy">
+                                <rect key="frame" x="20" y="353" width="287" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCE-ij-5V9">
+                                <rect key="frame" x="123" y="400" width="30" height="30"/>
+                                <state key="normal" title="retweet" image="iconmonstr-retweet-2-48"/>
+                                <connections>
+                                    <action selector="onRetweet:" destination="qUe-wD-5TO" eventType="touchUpInside" id="ctz-m9-KEb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAu-Zf-XG3">
+                                <rect key="frame" x="218" y="395" width="30" height="30"/>
+                                <state key="normal" title="Favorite" image="1467374585_Fire"/>
+                                <connections>
+                                    <action selector="onFavorite:" destination="qUe-wD-5TO" eventType="touchUpInside" id="vJ6-gO-hgO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chV-a3-N0e">
+                                <rect key="frame" x="251" y="400" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-pg-9Nu">
+                                <rect key="frame" x="161" y="400" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9a-oO-Zlb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="6"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhj-Dn-P2S">
+                                <rect key="frame" x="315" y="64" width="6" height="460"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDG-du-a7e">
+                                <rect key="frame" x="0.0" y="518" width="320" height="6"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-Nc-olz">
+                                <rect key="frame" x="0.0" y="64" width="6" height="460"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-RB-YVu">
+                                <rect key="frame" x="5" y="70" width="310" height="3"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoX-GL-R2G">
+                                <rect key="frame" x="312" y="70" width="3" height="448"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSn-Fr-YWd">
+                                <rect key="frame" x="5" y="516" width="309" height="3"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Q-i6-VeY">
+                                <rect key="frame" x="5" y="70" width="3" height="446"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="Yrq-9t-mGE">
+                                <rect key="frame" x="8" y="72" width="42" height="42"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="Jxz-YA-ROd">
+                                <rect key="frame" x="270" y="72" width="42" height="42"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="ytM-qj-aw4">
+                                <rect key="frame" x="270" y="474" width="42" height="42"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-gR-yus">
+                                <rect key="frame" x="8" y="474" width="42" height="42"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAg-Qm-ieB">
+                                <rect key="frame" x="38" y="400" width="30" height="30"/>
+                                <state key="normal" title="Reply" image="1467413403_127_ArrowLeft"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9B-lW-IGi">
+                                <rect key="frame" x="8" y="144" width="50" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNV-r7-TMt">
+                                <rect key="frame" x="91" y="144" width="221" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="detailFavorites" destination="chV-a3-N0e" id="EAR-ha-Xgr"/>
+                        <outlet property="detailImage" destination="L9B-lW-IGi" id="POl-Rf-M4A"/>
+                        <outlet property="detailName" destination="QNV-r7-TMt" id="7dY-We-llP"/>
+                        <outlet property="detailRetweets" destination="xaF-pg-9Nu" id="r4e-CO-H9W"/>
+                        <outlet property="detailTime" destination="vOL-IP-jUy" id="W0x-v4-bRv"/>
+                        <outlet property="detailTweetLabel" destination="mYz-Ei-v1y" id="14L-HT-o5Z"/>
+                        <outlet property="detailUsername" destination="UpQ-Wz-8aQ" id="rwQ-Dl-ZZ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjg-h6-6te" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3031" y="135"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="qO2-EP-gEh">
+            <objects>
+                <viewController id="mpq-md-fIm" customClass="postViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bam-2k-GM3"/>
+                        <viewControllerLayoutGuide type="bottom" id="HcN-ki-tSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jnd-fp-ZYA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K74-XB-g6n">
+                                <rect key="frame" x="282" y="28" width="30" height="30"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="mpq-md-fIm" eventType="touchUpInside" id="eC5-JU-Pes"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Iy-To-HZK">
+                                <rect key="frame" x="8" y="66" width="304" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mpq-md-fIm" id="Ehq-k7-2RV"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-5k-S9u">
+                                <rect key="frame" x="41" y="386" width="237" height="65"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPost:" destination="mpq-md-fIm" eventType="touchUpInside" id="evy-Ni-tYN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQh-0I-HyK">
+                                <rect key="frame" x="0.0" y="61" width="320" height="6"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEn-fc-ELE">
+                                <rect key="frame" x="0.0" y="61" width="6" height="289"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMG-8J-4rJ">
+                                <rect key="frame" x="0.0" y="344" width="320" height="6"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVM-td-pKF">
+                                <rect key="frame" x="314" y="66" width="6" height="284"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="ZzQ-bP-PUZ">
+                                <rect key="frame" x="8" y="358" width="22" height="25"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="vmx-9B-3kb">
+                                <rect key="frame" x="282" y="360" width="22" height="25"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1467382501_TWITTER" highlightedImage="1467382501_TWITTER" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-fQ-ANa">
+                                <rect key="frame" x="107" y="464" width="105" height="90"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKm-uT-KUf">
+                                <rect key="frame" x="8" y="46" width="29" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="out of 140 characters left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-V7-6mU">
+                                <rect key="frame" x="30" y="46" width="135" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="characterCount" destination="qKm-uT-KUf" id="Ba1-Gn-brk"/>
+                        <outlet property="postText" destination="5Iy-To-HZK" id="nT6-k2-lJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24Y-rY-DOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262" y="-352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LIR-98-GLQ">
+            <objects>
+                <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="zf1-Xa-ahi" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="e9h-Tc-0Tr">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="15"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RdO-Qa-l55">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hrB-xk-vuN" kind="relationship" relationship="rootViewController" id="sWq-29-MOy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxS-0F-MPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="775"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="47e-w3-ub1">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="eqr-oz-ZPo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HOl-Ix-gBs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zf1-Xa-ahi" kind="relationship" relationship="viewControllers" id="7gx-rD-vzH"/>
+                        <segue destination="Bqr-eK-V04" kind="relationship" relationship="viewControllers" id="iHT-x6-6Ag"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSi-IM-bsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="279"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="c8k-Ow-kal">
+            <objects>
+                <viewController id="Bqr-eK-V04" customClass="profileViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tNV-Z5-6fn"/>
+                        <viewControllerLayoutGuide type="bottom" id="i03-Jn-MsS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BMW-Zt-gOz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mod-wY-r3e">
+                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-ar-RYI">
+                                <rect key="frame" x="120" y="20" width="200" height="26"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD4-ui-Dox">
+                                <rect key="frame" x="125" y="45" width="195" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Uz-9F-2Rl">
+                                <rect key="frame" x="8" y="95" width="19" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-uO-xt0">
+                                <rect key="frame" x="104" y="94" width="14" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92C-f1-TVW">
+                                <rect key="frame" x="212" y="95" width="23" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-c0-A1a">
+                                <rect key="frame" x="0.0" y="196" width="320" height="372"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileTableCell" rowHeight="57" id="R5V-7X-2iu" customClass="ProfileTableCell" customModule="Tweeter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R5V-7X-2iu" id="UuS-Rw-0vs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqT-Tc-Irw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Si-zN-tQV">
+                                                    <rect key="frame" x="0.0" y="53" width="320" height="3"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="profilePostsLabel" destination="HqT-Tc-Irw" id="4vq-Pa-i9z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tagline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMm-JV-8wg">
+                                <rect key="frame" x="0.0" y="124" width="320" height="55"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-lt-xul">
+                                <rect key="frame" x="28" y="95" width="49" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opR-2j-OwC">
+                                <rect key="frame" x="125" y="95" width="68" height="22"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-sn-Y0b">
+                                <rect key="frame" x="1" y="187" width="319" height="7"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOM-tr-E2i">
+                                <rect key="frame" x="243" y="95" width="76" height="21"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="xPm-6L-aJL">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="15"/>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="profileFollowers" destination="oaK-uO-xt0" id="MQk-yU-7QH"/>
+                        <outlet property="profileFollowing" destination="92C-f1-TVW" id="TLB-ap-rI3"/>
+                        <outlet property="profileImage" destination="mod-wY-r3e" id="f8G-7Q-LcS"/>
+                        <outlet property="profileName" destination="zBx-ar-RYI" id="1oY-Qz-3MX"/>
+                        <outlet property="profileTableView" destination="PnA-c0-A1a" id="oUM-CW-iCT"/>
+                        <outlet property="profileTagline" destination="cMm-JV-8wg" id="Yuc-Yh-JQJ"/>
+                        <outlet property="profileTweets" destination="0Uz-9F-2Rl" id="XIY-cD-tuw"/>
+                        <outlet property="profileUsername" destination="zD4-ui-Dox" id="7BA-wl-axC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13r-Ch-0HK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="1085"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1467374585_Fire" width="48" height="48"/>
+        <image name="1467381729_sign-in" width="32" height="32"/>
+        <image name="1467382383_twitter_social_media_logo_brand" width="256" height="256"/>
+        <image name="1467382501_TWITTER" width="128" height="128"/>
+        <image name="1467383714_twitter_online_social_media" width="32" height="32"/>
+        <image name="1467413403_127_ArrowLeft" width="128" height="128"/>
+        <image name="iconmonstr-pen-18-32" width="32" height="32"/>
+        <image name="iconmonstr-retweet-2-48" width="48" height="48"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
